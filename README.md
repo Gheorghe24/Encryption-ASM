@@ -1,20 +1,25 @@
+# Encryption-ASM
 
-Task 1:
+Simple Cipher
+-------------
 Am luat 2 cazuri:
 in care caracterul criptat trece peste 'Z' sau cand ramane intre A si Z
 Ptu cazul de mai sus am un label in care scad cu 26
 Apoi pun in edi aceasta suma si verific daca am pus toate elementele
 
-Task2:
+Points
+-------
 
-2.1 Points-distance
+2.1  Points-distance
     Mut in 2 registre de marimea "short", primul si urmatorul x, le compar si vad care e mai mare(daca nu sunt egale).
     Scad din cel mai mare pe cel mai mic si asta e distanta.
     In cazul in care sunt egale, fac acelasi lucru doar ca ptu cei 2 y
+    
 2.2 Road
 salvez in 2 registre elementele din structura(mai intai primul x si apoi cel de-al doilea).Apoi o sa iterez pana termin punctele
 Verific ce coordonate sunt egale(x sau y) si apoi scad din cel mai mare pe celalalt.
 Aceasta este distanta calculata pe care o mut in vector in functie de pozitia cu care parcurg,asa cum s-a cerut.(salvez in ecx un iterator pana la len)
+
 2.3 is_square
 Folosesc mai multe variabile globale, ptu a nu folosi registre in zadar si sa imi usurez munca.
 Parcurg elementele din vector 
@@ -28,7 +33,8 @@ for(sum = 0; i = 1; sum < n; i+=2) {
 }
     nu e patrat perfect
 
-Taskul 3:
+Beaufort Encryption
+-------------------
 Declar cateva variabile globale: lungimea cheii, lungimea textului,pozitia din cheie si pozitia din text.
 Incep parcurgerea textului
 Scad din caracterul din cheie, caracterul din text. Verific daca nu cumva prima litera e mai "mare" decat cea de-a 2-a.
@@ -38,7 +44,8 @@ In "continuare" iterez variabilele in care salvez pozitiile, mut in esi caracter
 Ptu cheie, o parcurg iarasi de la inceput
 Ptu text opresc programul.
 
-Taskul 4:
+Spiral Encryption
+-----------------
 Incep prin a declara cateva variabile globale:indici cu care parcurg linia, indici cu care parcurg coloana,numarul de linii pe care il parcurg in matrice si numarul de coloane, num(marimea coloanei/matricei)
 Am un iterator ptu acele 4 cazuri si un iterator in care salvez pozitia din text
 Cele 4 cazuri sunt:
@@ -88,4 +95,4 @@ while (k < m && l < n) {
 
 
 
-# Encryption-ASM
+
