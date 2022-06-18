@@ -47,11 +47,11 @@ I start scrolling through the text
 
 Subtract from the character in the key the character in the text. I check to see if the first letter is "bigger" than the second.
 I then have a label for the "unhappy" case, the difference is less than 0.
-Here I also use the properties of the "straight board" and add 26 to get to the position I need
+Here I also use the properties of the "tabula recta" and add 26 to get to the position I need
 
-In "next" I iterate the variables in which I save the positions, I move the calculated character [the address where I need to put the encrypted text], I check if I haven't reached the end of those 2 texts (the text and the key).
+In "next" I iterate the variables in which I save the positions, I move the calculated character (the address where I need to put the encrypted text), I check if I haven't reached the end of those 2 texts (the text and the key).
 For the key, I go through it again from the beginning
-Ptu text stop the program.
+For text stop the program.
 
 Spiral Encryption
 -----------------
