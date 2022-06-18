@@ -55,14 +55,18 @@ For text stop the program.
 
 Spiral Encryption
 -----------------
-Incep prin a declara cateva variabile globale:indici cu care parcurg linia, indici cu care parcurg coloana,numarul de linii pe care il parcurg in matrice si numarul de coloane, num(marimea coloanei/matricei)
-Am un iterator ptu acele 4 cazuri si un iterator in care salvez pozitia din text
-Cele 4 cazuri sunt:
-parcurg prima linie
-parcurg ultima coloana
-parcurg ultima linie
-parcurg prima coloana(de jos in sus)
-Acestea sunt 4 structuri "for" care se parcurg intr-o directie
+I start by declaring some global variables: indexes that go through the line, indexes that go through the column, the number of lines that I go through in the matrix and the number of columns, num (size of the column / matrix)
+I have an iterator for those 4 cases and an iterator in which I save the position in the text
+
+The 4 cases are:
+
+go through the first line
+go through the last column
+go through the last line
+go through the first column (bottom to top)
+
+These are 4 "for" structures that go in one direction
+
 Practic, impart matricea in limite sau parti(patrate) si am un label care se repeta pana nu parcurge toate elementele din matrice
 Pentru acest task,am facut codul in c care ar arata cam asa
 Sper sa se inteleaga mult mai bine, restul este scris foarte detaliat in comentarii
@@ -70,7 +74,8 @@ k = 0 ;index ptu inceputul liniei
 m = nr de elemente de pe linie/coloana, index ptu finalul liniei
 l = 0 index ptu inceputul coloanei
 n  e acelasi index doar ptu finalul coloanei
-        i - iterator
+i - iterator
+        
 while (k < m && l < n) {
 
         for (i = l; i < n; ++i) {
