@@ -67,13 +67,15 @@ go through the first column (bottom to top)
 
 These are 4 "for" structures that go in one direction
 
-Practic, impart matricea in limite sau parti(patrate) si am un label care se repeta pana nu parcurge toate elementele din matrice
-Pentru acest task,am facut codul in c care ar arata cam asa
-Sper sa se inteleaga mult mai bine, restul este scris foarte detaliat in comentarii
-k = 0 ;index ptu inceputul liniei
-m = nr de elemente de pe linie/coloana, index ptu finalul liniei
-l = 0 index ptu inceputul coloanei
-n  e acelasi index doar ptu finalul coloanei
+Basically, I divide the matrix into limits or parts (squares) and I have a label that repeats itself until it goes through all the elements in the matrix.
+
+For this task, I made the code in c that would look something like this
+I hope it is understood much better, the rest is written in great detail in the comments
+
+k = 0 index for the beginning of the line
+m = number of elements on the row / column, index for the end of the row
+l = 0 index for the beginning of the column
+n is the same index only for the end of the column
 i - iterator
         
 while (k < m && l < n) {
