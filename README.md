@@ -72,10 +72,10 @@ Basically, I divide the matrix into limits or parts (squares) and I have a label
 For this task, I made the code in c that would look something like this
 I hope it is understood much better, the rest is written in great detail in the comments
 
-k = 0 index for the beginning of the line
-m = number of elements on the row / column, index for the end of the row
-l = 0 index for the beginning of the column
-n is the same index only for the end of the column
+k = 0 index for the beginning of the line \
+m = number of elements on the row / column, index for the end of the row \
+l = 0 index for the beginning of the column \
+n is the same index only for the end of the column \
 i - iterator
         
 while (k < m && l < n) {
