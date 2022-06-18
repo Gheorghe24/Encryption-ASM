@@ -2,47 +2,56 @@
 
 Simple Cipher
 -------------
-Am luat 2 cazuri:
-in care caracterul criptat trece peste 'Z' sau cand ramane intre A si Z
-Ptu cazul de mai sus am un label in care scad cu 26
-Apoi pun in edi aceasta suma si verific daca am pus toate elementele
+We took 2 cases:
+
+in which the encrypted character passes over 'Z' or when it remains between A and Z
+In the case above, I have a label that drops by 26
+Then I edit this amount and check if I put all the elements
 
 Points
 -------
 
 2.1  Points-distance
-    Mut in 2 registre de marimea "short", primul si urmatorul x, le compar si vad care e mai mare(daca nu sunt egale).
-    Scad din cel mai mare pe cel mai mic si asta e distanta.
-    In cazul in care sunt egale, fac acelasi lucru doar ca ptu cei 2 y
+
+I move into 2 registers of size "short", the first and the next x, I compare them and see which one is bigger (if they are not equal).
+I go from the biggest to the smallest and that's the distance.
+If they are equal, they do the same thing only for the 2 y
     
 2.2 Road
-salvez in 2 registre elementele din structura(mai intai primul x si apoi cel de-al doilea).Apoi o sa iterez pana termin punctele
-Verific ce coordonate sunt egale(x sau y) si apoi scad din cel mai mare pe celalalt.
-Aceasta este distanta calculata pe care o mut in vector in functie de pozitia cu care parcurg,asa cum s-a cerut.(salvez in ecx un iterator pana la len)
 
-2.3 is_square
-Folosesc mai multe variabile globale, ptu a nu folosi registre in zadar si sa imi usurez munca.
-Parcurg elementele din vector 
-Ptu cazul cu distanta 0, ii scriu automat in vector ca este patrat(am labelul reusit)
-Am folosit faptul ca suma numerelor impare este un patrat perfect si am verificat daca la un moment dat suma este egala cu acel numar.Daca e egala, e numar patrat, altfel nu e.
-Codul in c ar fi ceva de genul:
+I save the elements in the structure in 2 registers (first the first x and then the second). Then I will iterate until I finish the points
+
+I check which coordinates are equal (x or y) and then subtract the largest from the other.
+This is the calculated distance that I move in the vector according to the position with which I travel, as requested.
+
+2.3 is_square:
+
+I use several global variables, so as not to use registers in vain and to make my work easier.
+Scroll through the elements in the vector
+In the case of distance 0, I automatically write in the vector that it is square (I have the successful label)
+
+I used the fact that the sum of odd numbers is a perfect square and I checked if at some point the sum is equal to that number. If it is equal, it is a square number, otherwise it is not.
+
+The code in C will be:
 for(sum = 0; i = 1; sum < n; i+=2) {
     sum+=i
     if sum == n
-    e patrat perfect
+    //it is square
 }
-    nu e patrat perfect
+    //it isn't
 
 Beaufort Encryption
 -------------------
-Declar cateva variabile globale: lungimea cheii, lungimea textului,pozitia din cheie si pozitia din text.
-Incep parcurgerea textului
-Scad din caracterul din cheie, caracterul din text. Verific daca nu cumva prima litera e mai "mare" decat cea de-a 2-a.
-Am apoi un label ptu cazul "nefericit", diferenta este mai mica ca 0.
-Aici ma folosesc si de proprietatile "tabulei recta" si adun cu 26 ca sa ajung la pozitia la care am nevoie
-In "continuare" iterez variabilele in care salvez pozitiile, mut in esi caracterul calculat[adresa la care e nevoie sa pun textul criptat], verific daca nu am ajuns la finalul acelor 2 texte (textul si cheia).
-Ptu cheie, o parcurg iarasi de la inceput
-Ptu text opresc programul.
+I declare several global variables: key length, text length, key position, and text position.
+I start scrolling through the text
+
+Subtract from the character in the key the character in the text. I check to see if the first letter is "bigger" than the second.
+I then have a label for the "unhappy" case, the difference is less than 0.
+Here I also use the properties of the "straight board" and add 26 to get to the position I need
+
+In "next" I iterate the variables in which I save the positions, I move the calculated character [the address where I need to put the encrypted text], I check if I haven't reached the end of those 2 texts (the text and the key).
+For the key, I go through it again from the beginning
+Ptu text stop the program.
 
 Spiral Encryption
 -----------------
