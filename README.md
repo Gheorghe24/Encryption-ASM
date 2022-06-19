@@ -4,7 +4,7 @@ Simple Cipher
 -------------
 We took 2 cases:
 
-in which the encrypted character passes over 'Z' or when it remains between A and Z
+First, when the encrypted character passes over 'Z' and second when it remains between A and Z .
 In the case above, I have a label that drops by 26
 Then I edit this amount and check if I put all the elements
 
@@ -24,7 +24,7 @@ I save the elements in the structure in 2 registers (first the first x and then 
 I check which coordinates are equal (x or y) and then subtract the largest from the other.
 This is the calculated distance that I move in the vector according to the position with which I travel, as requested.
 
-2.3 is_square:
+2.3 Is_square:
 
 I use several global variables, so as not to use registers in vain and to make my work easier.
 Scroll through the elements in the vector
