@@ -61,7 +61,7 @@ I have an iterator for those 4 cases and an iterator in which I save the positio
 
 The 4 cases are:
 
-= go through the first line
+- go through the first line
 - go through the last column
 - go through the last line
 - go through the first column (bottom to top)
